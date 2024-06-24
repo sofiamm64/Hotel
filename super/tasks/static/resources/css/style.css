@@ -1,0 +1,33 @@
+body, h1, h3, p, a {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: rgb(190, 190, 143);
+}
+.logo{
+    float: left;
+    margin: 4px 30px;
+}
+nav{
+    height: 70px;
+    background-color: grey;
+}
+.menu{
+    float: right;
+    text-decoration: none;
+    list-style: none;
+    display: inline;
+    height: 30px;
+}
+.contenedort{
+    height: 500px;
+}
+.cimglg img{
+    margin: 10px 500px;
+    border-radius: 30%;
+}
+.textlg h2{
+    width: 90%;
+    text-align: center;
+    margin: 0px 50px;
+}
