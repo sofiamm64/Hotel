@@ -5,19 +5,19 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Servicios</title>
+    <title>Paquetes</title>
     <link rel="stylesheet" href="{% static 'resources/css/styles.css' %}">
 </head>
 <body>
 
-{% include 'Navbar.html' %}
+    {% include 'Navbar.html' %}
 
 <div class="body-text">
     
     <div class="ParentDiv">
-        <h1>Lista de Servicios</h1>
+        <h1>Servicios</h1>
         <div class="card-container">
-            {% for servicio in servicios %}
+            {% for servicio in serv %}
             <div class="card">
                 <div class="card-content">
                     <h2>{{ servicio.Nombre }}</h2>
@@ -31,5 +31,4 @@
 
 </div>
 
-</body>
-</html>
+</body></html>

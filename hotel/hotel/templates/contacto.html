@@ -9,8 +9,65 @@
     <link rel="stylesheet" href="{% static 'resources/css/styles.css' %}">
 </head>
 <body>
+    <nav>
+        {% include 'Navbar.html' %}
+    </nav>
+    <div class="container">
+        <h1>Envía tu Pregunta</h1>
+        <form id="questionForm">
+            <label for="userName">Tu Nombre:</label>
+            <input type="text" id="userName" name="userName" required>
 
-    {% include 'Navbar.html' %}
+            <label for="userEmail">Tu Correo Electrónico:</label>
+            <input type="email" id="userEmail" name="userEmail" required>
+
+            <label for="userQuestion">Pregunta:</label>
+            <textarea id="userQuestion" name="userQuestion" rows="4" required></textarea>
+
+            <button type="submit">Enviar</button>
+        </form>
+        <div id="result"></div>
+    </div>
+    <div class="container2">
+        <label for="userName">NIT:</label>
+        <p>679059471</p>
+        <label for="userName">EMPRESA:</label>
+        <p>HOTEL</p>
+        <label for="Correo">CORREO:</label>
+        <p>hotelMarriottts607@gmail.com</p>
+        <label for="Telefono">TELEFONO:</label>
+        <p>+57 4901777791</p>
+        <label for="text">DESCRIPCION:</label>
+        <P>Bienvenido al Hotel Marriottts, donde el lujo y la comodidad se fusionan para ofrecerte una experiencia inolvidable en el corazón y mente.</P>
+
+    </div>
+    <div class="container3">
+        <img src="../static/resources/img/what.png" width="70px" alt="">
+        <img src="../static/resources/img/face.png"  width="70px" alt="">
+        <img src="../static/resources/img/inta.png" width="70px" alt="">
+        <img src="../static/resources/img/skype.png"  width="70px" alt="">
+        <img src="../static/resources/img/tw.png" width="70px" alt="">
+
+    </div>  
+    
+    <script>
+        document.getElementById('questionForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            let userName = document.getElementById('userName').value;
+            let userEmail = document.getElementById('userEmail').value;
+            let userQuestion = document.getElementById('userQuestion').value;
+
+            if (userName && userEmail && userQuestion) {
+                document.getElementById('result').innerText = '¡Pregunta enviada con éxito!';
+                document.getElementById('result').style.color = 'green';
+                document.getElementById('questionForm').reset();
+            } else {
+                document.getElementById('result').innerText = 'Por favor, completa todos los campos.';
+                document.getElementById('result').style.color = 'red';
+            }
+        });
+    </script>
 
 </body>
 </html>

@@ -5,12 +5,15 @@
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
 }
+body{
+  background-color: rgb(190, 190, 143);
+}
 nav{
-  position: fixed;
+
   z-index: 99;
   width: 100%;
-  
-  background: #242526;
+  background-color: #7eb3b1;
+  position: absolute;
 }
 nav .wrapper{
   position: relative;
@@ -23,12 +26,22 @@ nav .wrapper{
   align-items: center;
   justify-content: space-between;
 }
-.wrapper .logo a{
-  color: #f2f2f2;
-  font-size: 30px;
-  font-weight: 600;
-  text-decoration: none;
+.logo{
+  margin-top: 2%;
+  border-radius: 50%;
 }
+.cimglg img{
+  margin: 85px 520px 0px;
+  border-radius: 50%;
+  box-shadow: 0 0 10px 15px #7eb3b1;
+}
+.textlg p{
+  width: 90%;
+  text-align: center;
+  margin: 5px 50px;
+  font-size: xx-large;
+}
+
 .wrapper .nav-links{
   display: inline-flex;
 }
@@ -268,24 +281,30 @@ nav input{
   padding: 0 30px;
 }
 .body-text div{
-  font-size: 45px;
+  font-size: 20px;
   font-weight: 600;
 }
 
 /*TARJETAS DE SERVICIOS*/
 
+.textt{
+  position: fixed;
+  margin-top: 10px;
+  margin-left: 540px;
+}
 .ParentDiv {
-    max-width: 1000px;
+    max-width: 1100px;
     margin: 0 auto;
-    padding: 20px;
     font-family: 'Arial', sans-serif;
-    margin-top: 80px;
+    margin-top: 0px;
+    width: 100%;
   }
   
   .card-container {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
+    height: 400px;
   }
   
   .card {
@@ -339,3 +358,94 @@ nav input{
       width: 100%;
     }
   }
+
+  .container {
+    background: white;
+    padding: 20px 40px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    width: 70%;
+    max-width: 440px;
+    position: absolute;
+    margin: 90px 60px;
+}
+.container2{
+  background: white;
+  padding: 20px 40px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  width: 90%;
+  max-width: 700px;
+  position: absolute;
+  margin: 90px 600px;
+  height: 350px;
+}
+.container3{
+  background: white;
+  padding: 20px 40px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  width: 90%;
+  max-width: 700px;
+  position: absolute;
+  margin: 450px 600px;
+  height: 110px;
+}
+.container3 img{
+  margin: 0 24px;
+}
+.container3 image:hover{
+  cursor: pointer;
+}
+h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #555;
+}
+input[type="text"],
+input[type="email"],
+textarea {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    resize: none;
+}
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+button:hover {
+    background-color: #0056b3;
+}
+#result {
+    margin-top: 20px;
+    text-align: center;
+    color: #333;
+}
+.footer {
+  background-color: #333;
+  color: white;
+  padding: 20px 0;
+  text-align: center;
+  width: 100%;
+}
+.footer .container {
+  max-width: 1000px;
+  margin: auto;
+  padding: 0 20px;
+  color: black;
+}

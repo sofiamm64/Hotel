@@ -1,6 +1,7 @@
 from django.db import models
+from cargo.models import cargo
 
-class Usuarios(models.Model):
+class usuario(models.Model):
     Elegir_Rol = [
         (1, 'Empleado'),
         (2, 'Administrador'),
@@ -11,4 +12,7 @@ class Usuarios(models.Model):
     Apellido = models.CharField(max_length=25)
     Correo = models.CharField(max_length=15, unique=True)
     Celular = models.CharField(max_length=15, unique=True)
-    Rol = models.IntegerField(choices=Elegir_Rol, default=1, null=True, blank=True)
+    cargo =  models.ForeignKey(cargo, on_delete=models.CASCADE, db_column='Codigo_C')
+
+    def __str__(self):
+            return str(self.Documento)

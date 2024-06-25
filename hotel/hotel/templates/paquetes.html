@@ -15,14 +15,14 @@
 <div class="body-text">
     
     <div class="ParentDiv">
-        <h1>Lista de Paquetes</h1>
+        <h1>Paquetes</h1>
         <div class="card-container">
-            {% for servicio in servicios %}
+            {% for paquete in paq %}
             <div class="card">
                 <div class="card-content">
-                    <h2>{{ servicio.Nombre }}</h2>
-                    <p><strong>Precio:</strong> {{ servicio.Precio|floatformat:"0" }}</p>
-                    <p>{{ servicio.Descripcion }}</p>
+                    <h2>{{ paquetes.Ciudad }}</h2>
+                    <p>{{ paquetes.Nombre }}</p>
+                    <p><strong>Precio:</strong> {{ paquetes.Precio|floatformat:"0" }}</p>
                 </div>
             </div>
             {% endfor %}
