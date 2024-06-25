@@ -1,6 +1,5 @@
-@REM from django.contrib import admin
-@REM from.models import empresa
-@REM from.models import ciudad
+from django.contrib import admin
+from.models import empresa
 
-@REM # Register your models here.
-@REM admin.site.register(empresa)
+
+admin.site.register(empresa)

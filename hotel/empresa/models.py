@@ -1,13 +1,13 @@
-@REM from django.db import models
+from django.db import models
+from ciudad.models import ciudad
 
-@REM class empresa(models.Model):
-@REM     Nit = models.CharField(max_length=20, primary_key=True)
-@REM     nombre = models.CharField(max_length=25)
-@REM     slogan = models.CharField(max_length=30)
-@REM     correo = models.EmailField(max_length=30)
-@REM     celular = models.CharField(max_length=15)
-@REM     descripcion = models.TextField()
-@REM     codigo_PC =  models.ForeignKey(codigo_PC, max_length=20,on_delete=models.SET_NULL,null=True,blank=True, db_column='codigo_PC')
+class empresa(models.Model):
+    Nit = models.CharField(max_length=20, primary_key=True)
+    nombre = models.CharField(max_length=25)
+    slogan = models.CharField(max_length=30)
+    correo = models.EmailField(max_length=30)
+    descripcion = models.TextField()
+    codigo_PC =  models.ForeignKey(ciudad, on_delete=models.CASCADE, db_column='codigo_PC')
 
-@REM     def __str__(self):
-@REM         return str(self.Nit)
+    def __str__(self):
+       return str(self.Nit)
