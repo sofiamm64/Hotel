@@ -1,16 +1,18 @@
 from django.shortcuts import render
 from .models import servicio
 from .models import paquetes
+from .models import habitacion
 
 def ad_servicios(request):
-    servicios = servicios.objects.all()
+    servicios = servicio.objects.all()
     return render(request, 'servicios.html',{'servicios': servicios})
 
-def ad_paquetes(request):
-    pacq = paquetes.objects.all()
-    return render(request, 'paquetes.html',{'pacq': pacq})
-
-
 def ad_habitacion(request):
-    servs = habitacion.objects.all()
-    return render(request, 'habitacion.html',{'servs': servs})
+    habitaciones = habitacion.objects.all()
+    return render(request, 'habitacion.html',{'habitaciones': habitaciones})
+
+def ad_paquetes(request):
+    paquete = paquetes.objects.all()
+    return render(request, 'paquetes.html',{'paquetes': paquete})
+
+

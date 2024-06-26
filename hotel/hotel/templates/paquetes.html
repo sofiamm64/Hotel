@@ -17,12 +17,12 @@
     <div class="ParentDiv">
         <h1>Paquetes</h1>
         <div class="card-container">
-            {% for paquete in paq %}
+            {% for i in paquetes %}
             <div class="card">
                 <div class="card-content">
-                    <h2>{{ paquetes.Ciudad }}</h2>
-                    <p>{{ paquetes.Nombre }}</p>
-                    <p><strong>Precio:</strong> {{ paquetes.Precio|floatformat:"0" }}</p>
+                    <h2>{{ i.Ciudad }}</h2>
+                    <p>{{ i.Nombre }}</p>
+                    <p><strong>Precio:</strong> {{ i.Precio }}</p>
                 </div>
             </div>
             {% endfor %}
